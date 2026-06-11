@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    --background: 60 20% 97%; /* #FAFAF7 */
+    --foreground: 210 24% 16%; /* #1F2933 */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    --primary: 46 65% 52%; /* Muted Gold #D4AF37 */
+    --primary-foreground: 60 20% 97%;
+
+    --secondary: 108 11% 56%; /* Sage Green #8A9A86 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 44 21% 88%; /* #E5E2DA */
+    --muted-foreground: 215 16% 46%; /* #6B7280 */
+
+    --accent: 44 21% 88%; 
+    --accent-foreground: 210 24% 16%;
+
+    --destructive: 0 42% 51%; /* Muted Red #B25050 */
+    --destructive-foreground: 60 20% 97%;
+
+    --border: 44 21% 88%; /* #E5E2DA */
+    --input: 44 21% 88%;
+    --ring: 46 65% 52%; /* Muted Gold */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 24% 16%;
+    --foreground: 60 20% 97%;
+    --card: 215 16% 12%;
+    --card-foreground: 60 20% 97%;
+    --popover: 215 16% 12%;
+    --popover-foreground: 60 20% 97%;
+    --primary: 46 65% 52%;
+    --primary-foreground: 60 20% 97%;
+    --secondary: 108 11% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 215 16% 20%;
+    --muted-foreground: 44 21% 88%;
+    --accent: 215 16% 20%;
+    --accent-foreground: 60 20% 97%;
+    --destructive: 0 42% 51%;
+    --destructive-foreground: 60 20% 97%;
+    --border: 215 16% 20%;
+    --input: 215 16% 20%;
+    --ring: 46 65% 52%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
