@@ -41,7 +41,7 @@ cd backend
 ./mvnw spring-boot:run
 ```
 
-The backend server will start on `http://localhost:8080`.
+The backend server will start on localhost.
 The embedded H2 database will store its files in the `./backend/data` directory automatically.
 
 ### 2. Run the Frontend
@@ -54,4 +54,4 @@ npm install
 npm run dev
 ```
 
-The frontend will start on `http://localhost:5173`. Open this URL in your browser to interact with LedgerFX.
+The frontend will start on localhost. Open the URL in your browser to interact with LedgerFX.
